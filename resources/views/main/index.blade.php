@@ -27,7 +27,7 @@
         <div class="recipes-list">
             @foreach($recipes as $recipe)
                 <!-- single recipe -->
-                <a href="single-recipe.html" class="recipe">
+                <a href="{{ route('recipes.single', ['id' => $recipe->id]) }}" class="recipe">
                     <img
                     src="{{ asset('img/' . $recipe->img) }}"
                     class="img recipe-img"

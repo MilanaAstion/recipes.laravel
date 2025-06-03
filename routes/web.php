@@ -14,3 +14,4 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/single/{id}', [MainController::class, 'single'])->name('recipes.single');
