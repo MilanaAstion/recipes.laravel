@@ -20,4 +20,17 @@ class MainController extends Controller
         $recipe = Recipe::find($id);
         return view('main.single', ['recipe' => $recipe]);
     }
+
+    public function tags()
+    {
+        $tags = Tag::all();
+        return view('main.tags', ['tags' => $tags]);
+    }
+
+    public function recipes()
+    {
+        $recipes = Recipe::all();
+        $tags = Tag::all();
+        return view('main.recipes', ['recipes' => $recipes, 'tags' => $tags]);
+    }
 }
